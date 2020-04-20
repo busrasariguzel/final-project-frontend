@@ -10,8 +10,6 @@ const Journal = (props)=> {
                 return (
                 <JournalEntry journal={journal} key={journal._id} onUpdate = {props.onUpdate} onDelete={props.onDelete}/>
                 )
-                
-                
             }
             )} 
 

@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import Journal from './Journal'
-import NewJournal from './NewJournal';
+import Journal from './Journal Components/Journal'
+import NewJournal from './Journal Components/NewJournal';
+import MemeGenerator from './Meme Generator Components/MemeGenerator'
+import CoronaCases from './Corona Component/CoronaCases'
+import TotalCases from './Corona Component/TotalCases';
 
 class App extends Component {
 constructor(){
@@ -10,6 +13,7 @@ constructor(){
         journals: [],
         journal: {},
         toggle: true,
+        cases: [],
         
     }
 }
@@ -23,6 +27,28 @@ getJournals = () => {
     })
     console.log(this.state.journals)
 }
+getCoronaResults =() => {
+    axios.get("https://covid-193.p.rapidapi.com/statistics", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "covid-193.p.rapidapi.com",
+		"x-rapidapi-key": "166a12c160msh0bf532aec0b7a0ep10056ajsncff2841e5dfb"
+    }
+    
+})
+.then(response => {
+
+    return this.setState({ cases: response.data.response})
+    
+    
+})
+.catch(err => {
+	console.log(err);
+});
+
+}
+
+
 handleNewJournalSubmit=(event,journal,id)=> {
     event.preventDefault();
     let axiosConfig = {
@@ -53,6 +79,10 @@ onUpdate = (id) => {
 //     })
 // }
 
+
+
+
+
 componentDidMount(){
     // const url = '/journals';
     // axios.get(url).then((journals)=>{
@@ -62,7 +92,11 @@ componentDidMount(){
     // })
     
     this.getJournals();
+    this.getCoronaResults();
 }
+
+
+
 
 // componentDidMount() {
 //     axios.get('/journals')
@@ -77,14 +111,24 @@ render(){
     console.log(this.state.journals)
     return(
 <div>
+<div className='Corona Cases'>
+    <TotalCases cases={this.state.cases}/>
+<CoronaCases cases={this.state.cases}/>
 
+
+</div>
 <div className="journal section" style={{border:'0.5px hotPink solid'}}>
 <h1 style={{color:'hotPink'}}>Gratitude Journal</h1>
 <NewJournal handleNewJournalSubmit={this.handleNewJournalSubmit} />
 <Journal onDelete={this.onDelete}  onUpdate= {this.onUpdate} journals={this.state.journals}/> 
 </div>
-        
-        
+<div className="generate meme section">
+
+
+<MemeGenerator />  
+</div>  
+
+
         
         
 </div>

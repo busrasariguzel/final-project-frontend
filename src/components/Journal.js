@@ -8,7 +8,7 @@ const Journal = (props)=> {
 <div>
         {props.journals.map((journal,idx)=>{
                 return (
-                <JournalEntry journal={journal} key={journal._id} onDelete={props.onDelete}/>
+                <JournalEntry journal={journal} key={journal._id} onUpdate = {props.onUpdate} onDelete={props.onDelete}/>
                 )
                 
                 

@@ -1,16 +1,34 @@
 import React from 'react'
 
 const JournalEntry = (
-    {onDelete,journal : {date, entry1, entry2,entry3,entry4,entry5, _id:id}}
+    {onDelete, onUpdate, journal : {date, entry1, entry2,entry3,entry4,entry5, _id:id}}
     ) => {
     return (
 <div key={id}>
-    <h1> Journal </h1>
-    <h4> {date} </h4>
-    <h4> entry : {entry1} </h4>
-    <h4> entry 2: {entry2} </h4>
+
+    <h4 style={{color:'blue'}}> {date} </h4>
+    <h5> entry #1: {entry1} </h5>
+    <h5> entry #2: {entry2} </h5>
+    <h5> entry #3: {entry3} </h5>
+    <h5> entry #4: {entry4} </h5>
+    <h5> entry #5: {entry5} </h5>
+
+
+
+
+
+
+    <button style={{color:'red', margin:'10px 15px'}} 
+onClick={()=>{
+return onDelete(id)
+}}
+>Delete</button>
+<button  style={{ color: 'green', margin:'10px 15px'}} 
+onClick={()=>{
+return onUpdate(id)
+}}>Update</button>
 </div>
-    )
+)
 }
 
 export default JournalEntry

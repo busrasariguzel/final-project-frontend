@@ -17,7 +17,7 @@ getJournals = () => {
     const url = '/journals';
     axios.get(url).then((journal)=>{
         console.log('journal...', journal)
-        console.log('journalsdata...', journal.data)
+        console.log('journals data...', journal.data)
 
         return this.setState({ journals: journal.data})
     })
@@ -35,6 +35,15 @@ handleNewJournalSubmit=(event,journal,id)=> {
         this.getJournals();
     })
 }
+onDelete = (id) => {
+    axios.delete(`/journal/${id}`).then(()=>{
+        this.getJournals();
+    })
+}
+onUpdate = (id) => {
+    console.log('This blog will be updated', id)
+}
+
 
 // getJournalItem = (id) => {
 //     axios.get(`/journal/${id}`).then((journal) => {
@@ -61,11 +70,6 @@ componentDidMount(){
 //       .catch(err => console.log(err))
 //   }
 
-onDelete = (id) => {
-    axios.delete(`/journal/${id}`).then(()=>{
-        this.getJournalItem()
-    })
-}
 
 
 
@@ -77,7 +81,7 @@ render(){
 
 <h1>App component</h1>
 <NewJournal handleNewJournalSubmit={this.handleNewJournalSubmit} />
-<Journal onDelete={this.onDelete} journals={this.state.journals}/> 
+<Journal onDelete={this.onDelete}  onUpdate= {this.onUpdate} journals={this.state.journals}/> 
 
         </div>
     )

@@ -1,14 +1,70 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import axios from 'axios';
+import Journal from './Journal'
 
 class App extends Component {
 constructor(){
     super()
+    this.state = {
+        journals: [],
+        journal: {},
+        toggle: true,
+        
+    }
 }
+getJournals = () => {
+    const url = '/journals';
+    axios.get(url).then((journal)=>{
+        console.log('journal...', journal)
+        console.log('journalsdata...', journal.data)
+
+        return this.setState({ journals: journal.data})
+    })
+    console.log(this.state.journals)
+}
+// getJournalItem = (id) => {
+//     axios.get(`/journal/${id}`).then((journal) => {
+//         this.setState({
+//             journal: journal.data,
+//         })
+//     })
+// }
+
+componentDidMount(){
+    // const url = '/journals';
+    // axios.get(url).then((journals)=>{
+    //     console.log(journals.data)
+    //     return this.setState({ journals: journals.data})
+        
+    // })
+    
+    this.getJournals();
+}
+
+// componentDidMount() {
+//     axios.get('/journals')
+//       .then(response => this.setState({journals: response.data}))
+//       .catch(err => console.log(err))
+//   }
+
+onDelete = (id) => {
+    axios.delete(`/journal/${id}`).then(()=>{
+        this.getJournalItem()
+    })
+}
+
+
+
 render(){
+    console.log(this.state.journals)
     return(
+        
         <div>
 
 <h1>App component</h1>
+
+{/* <p>{this.state.journals.}</p>  */}
+<Journal onDelete={this.onDelete} journals={this.state.journals}/> 
 
         </div>
     )

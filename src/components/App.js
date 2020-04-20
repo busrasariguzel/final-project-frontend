@@ -76,14 +76,18 @@ componentDidMount(){
 render(){
     console.log(this.state.journals)
     return(
-        
-        <div>
+<div>
 
-<h1>App component</h1>
+<div className="journal section" style={{border:'0.5px hotPink solid'}}>
+<h1 style={{color:'hotPink'}}>Gratitude Journal</h1>
 <NewJournal handleNewJournalSubmit={this.handleNewJournalSubmit} />
 <Journal onDelete={this.onDelete}  onUpdate= {this.onUpdate} journals={this.state.journals}/> 
-
-        </div>
+</div>
+        
+        
+        
+        
+</div>
     )
 }
 }

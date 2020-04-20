@@ -29,43 +29,43 @@ handleSubmit = (event) =>{
 render(){
     return(
         <div>
-            <form onSubmit={this.handleSubmit}>
+            <form style={{color: 'hotPink'}}onSubmit={this.handleSubmit}>
                 <div>
-            <label> Journal Entry #1 :
+            <label> #1 : 
                 </label>
-                <input type="text" placeholder="Entry #1..."
+                <input type="text" 
                 name="entry1"
                 value={this.state.journal.entry1}
                 onChange={this.handleChange}
                 />
                 <br></br>
-                <label> Journal Entry #2 :
+                <label> #2 :
                 </label>
-                <input type="text" placeholder="Entry #2..."
+                <input type="text" 
                 name="entry2"
                 value={this.state.journal.entry2}
                 onChange={this.handleChange}
                 />
                 <br></br>
-                <label> Journal Entry #3 :
+                <label> #3 :
                 </label>
-                <input type="text" placeholder="Entry #3..."
+                <input type="text" 
                 name="entry3"
                 value={this.state.journal.entry3}
                 onChange={this.handleChange}
                 />
                 <br></br>
-                <label> Journal Entry #4 :
+                <label> #4 :
                 </label>
-                <input type="text" placeholder="Entry #4..."
+                <input type="text" 
                 name="entry4"
                 value={this.state.journal.entry4}
                 onChange={this.handleChange}
                 />
                 <br></br>
-                <label> Journal Entry #5 :
+                <label> #5 :
                 </label>
-                <input type="text" placeholder="Entry #5..."
+                <input type="text" 
                 name="entry5"
                 value={this.state.journal.entry5}
                 onChange={this.handleChange}

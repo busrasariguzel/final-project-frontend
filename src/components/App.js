@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Journal from './Journal'
+import NewJournal from './NewJournal';
 
 class App extends Component {
 constructor(){
@@ -22,6 +23,19 @@ getJournals = () => {
     })
     console.log(this.state.journals)
 }
+handleNewJournalSubmit=(event,journal,id)=> {
+    event.preventDefault();
+    let axiosConfig = {
+        headers:{
+            'Content-Type' : 'application/json;charset=UTF-8',
+            'Access-Control-Allow-Origin' : '*',
+        },
+    };
+    axios.post('/journal',journal,axiosConfig).then(()=> {
+        this.getJournals();
+    })
+}
+
 // getJournalItem = (id) => {
 //     axios.get(`/journal/${id}`).then((journal) => {
 //         this.setState({
@@ -62,8 +76,7 @@ render(){
         <div>
 
 <h1>App component</h1>
-
-{/* <p>{this.state.journals.}</p>  */}
+<NewJournal handleNewJournalSubmit={this.handleNewJournalSubmit} />
 <Journal onDelete={this.onDelete} journals={this.state.journals}/> 
 
         </div>

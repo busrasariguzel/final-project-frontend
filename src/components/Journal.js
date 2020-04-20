@@ -2,6 +2,7 @@ import React  from 'react';
 import JournalEntry from './JournalEntry'
 
 
+
 const Journal = (props)=> {
     return (
 <div>

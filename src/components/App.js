@@ -5,6 +5,7 @@ import NewJournal from './Journal Components/NewJournal';
 import MemeGenerator from './Meme Generator Components/MemeGenerator'
 import CoronaCases from './Corona Component/CoronaCases'
 import TotalCases from './Corona Component/TotalCases';
+import Animation from './Animation'
 
 class App extends Component {
 constructor(){
@@ -108,10 +109,10 @@ componentDidMount(){
 
 
 render(){
-    console.log(this.state.journals)
     return(
 <div>
 <div className='Corona Cases'>
+<Animation />
     <TotalCases cases={this.state.cases}/>
 <CoronaCases cases={this.state.cases}/>
 

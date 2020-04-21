@@ -18,7 +18,10 @@ return(
 
 
             <p style={{color:'red'}}> Total Cases Worldwide : {item.cases.total}</p>
-        
+            <p>Total Deaths: {item.deaths.total}</p>
+            <p>New Cases : {item.cases.new}</p>
+            <p>New Deaths : {item.deaths.new}</p>
+            <p>Recovered: {item.cases.recovered}</p>
         
 </div>
 )

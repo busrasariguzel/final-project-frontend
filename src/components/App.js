@@ -15,8 +15,27 @@ constructor(){
         journal: {},
         toggle: true,
         cases: [],
+        currency: [],
         
     }
+}
+
+getCurrency = () => {
+    axios.get("https://currency-converter5.p.rapidapi.com/currency/historical/2020-01-01?format=json&to=USD&from=TRY&amount=1", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "currency-converter5.p.rapidapi.com",
+            "x-rapidapi-key": "166a12c160msh0bf532aec0b7a0ep10056ajsncff2841e5dfb"
+        }
+    })
+    .then(response => {
+        console.log('currency...', response);
+        return this.setState({ currency: response.data})
+    })
+    .catch(err => {
+        console.log(err);
+    });
+
 }
 getJournals = () => {
     const url = '/journals';
@@ -94,6 +113,7 @@ componentDidMount(){
     
     this.getJournals();
     this.getCoronaResults();
+    this.getCurrency();
 }
 
 

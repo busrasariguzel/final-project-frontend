@@ -15,9 +15,13 @@ class DollarToEuro extends Component{
     {obj.map((item, idx)=>{
         if (typeof item === 'object') {
             return (
-                <div key={idx}>>
+            <div key={idx}>
             <p> USD / {item.EUR.currency_name} </p>
             <p> {item.EUR.rate}  </p>
+            <label>Enter the dollar amount you want to convert to Euro </label>< br />
+            <input onChange={this.props.handleConvert} value={this.props.searchTerm} type="text" placeholder="Search.."/>
+            <br />
+            <label>{this.props.searchTerm * item.EUR.rate} </label>
             </div>
             )
             }

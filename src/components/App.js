@@ -20,6 +20,8 @@ constructor(){
         currency: [],
         currency2:[],
         currency3:[],
+        searchTerm: '',
+    
     }
 }
 
@@ -105,8 +107,8 @@ getCoronaResults =() => {
 .catch(err => {
 	console.log(err);
 });
-
 }
+
 
 
 handleNewJournalSubmit=(event,journal,id)=> {
@@ -121,6 +123,12 @@ handleNewJournalSubmit=(event,journal,id)=> {
         this.getJournals();
     })
 }
+handleConvert = (event) => {
+    this.setState({searchTerm:event.target.value}, ()=> {
+        console.log(this.state.searchTerm)
+    })
+    
+};
 onDelete = (id) => {
     axios.delete(`/journal/${id}`).then(()=>{
         this.getJournals();
@@ -144,31 +152,14 @@ onUpdate = (id) => {
 
 
 componentDidMount(){
-    // const url = '/journals';
-    // axios.get(url).then((journals)=>{
-    //     console.log(journals.data)
-    //     return this.setState({ journals: journals.data})
-        
-    // })
-    
+
     this.getJournals();
     this.getCoronaResults();
     this.getCurrency();
     this.getCurrency2();
     this.getCurrency3();
+    
 }
-
-
-
-
-// componentDidMount() {
-//     axios.get('/journals')
-//       .then(response => this.setState({journals: response.data}))
-//       .catch(err => console.log(err))
-//   }
-
-
-
 
 render(){
     return(
@@ -176,7 +167,7 @@ render(){
 <Animation />
     <div className='Currency'>
         <h3>Currency section</h3>
-        <Currency  currency={this.state.currency} currency2={this.state.currency2} currency3={this.state.currency3}/> 
+        <Currency handleConvert={this.handleConvert} searchTerm={this.state.searchTerm} currency={this.state.currency} currency2={this.state.currency2} currency3={this.state.currency3}/> 
     </div>
 <div className='Corona Cases'>
 

@@ -11,7 +11,7 @@ render (){
     return (
 
 <div style={{border:'0.5px solid black'}}>
-<DollarToTurkishLira currency={this.props.currency} />
+<DollarToTurkishLira handleConvert={this.props.handleConvert} searchTerm={this.props.searchTerm} currency={this.props.currency} />
 <DollarToEuro currency2 = {this.props.currency2} />
 <DollarToChineseYuan currency3 = {this.props.currency3}/>
 </div>

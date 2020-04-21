@@ -18,6 +18,7 @@ constructor(){
         toggle: true,
         cases: [],
         currency: [],
+        currency2:[],
         
     }
 }
@@ -34,6 +35,24 @@ getCurrency = () => {
         // console.log('currency...', response);
         this.setState({ currency: response.data})
         console.log(this.state.currency)
+    })
+    .catch(err => {
+        console.log(err);
+    });
+
+}
+getCurrency2 = () => {
+    axios.get("https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=EUR&amount=1", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "currency-converter5.p.rapidapi.com",
+            "x-rapidapi-key": "166a12c160msh0bf532aec0b7a0ep10056ajsncff2841e5dfb"
+        }
+    })
+    .then(response => {
+        // console.log('currency...', response);
+        this.setState({ currency2: response.data})
+        console.log(this.state.currency2)
     })
     .catch(err => {
         console.log(err);
@@ -117,6 +136,7 @@ componentDidMount(){
     this.getJournals();
     this.getCoronaResults();
     this.getCurrency();
+    this.getCurrency2();
 }
 
 
@@ -137,7 +157,7 @@ render(){
 <Animation />
     <div className='Currency'>
         <h3>Currency section</h3>
-         <Currency  currency={this.state.currency} /> 
+        <Currency  currency={this.state.currency} currency2={this.state.currency2}/> 
     </div>
 <div className='Corona Cases'>
 

@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import DollarToTurkishLira from './DollarToTurkishLira'
 
 class Currency extends Component {
     constructor(props){
@@ -6,13 +7,16 @@ class Currency extends Component {
     }
 render (){
     return (
-        <div>
 
-        </div>
+<div>
+< DollarToTurkishLira currency={this.props.currency} />
+
+</div>
+
+
     )
-}
 
 
-}
+}}
 
 export default Currency

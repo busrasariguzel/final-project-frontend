@@ -31,8 +31,9 @@ getCurrency = () => {
         }
     })
     .then(response => {
-        console.log('currency...', response);
-        return this.setState({ currency: response.data})
+        // console.log('currency...', response);
+        this.setState({ currency: response.data})
+        console.log(this.state.currency)
     })
     .catch(err => {
         console.log(err);
@@ -136,7 +137,7 @@ render(){
 <Animation />
     <div className='Currency'>
         <h3>Currency section</h3>
-        <Currency  currency={this.state.currency} />
+         <Currency  currency={this.state.currency} /> 
     </div>
 <div className='Corona Cases'>
 

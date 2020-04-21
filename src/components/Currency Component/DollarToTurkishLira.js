@@ -12,21 +12,16 @@ class DollarToTurkishLira extends Component{
         return (
             <div>
     {/* <p>{this.props.currency.base_currency_code}</p>/ */}
-    {obj.map((item)=>{
+    {obj.map((item, idx)=>{
         if (typeof item === 'object') {
             return (
-                <div>
-            <p> USD / {item.TRY.currency_name} </p><br></br>
-            <bold> {item.TRY.rate}  </bold>
+            <div key={idx}>
+            <p> USD / {item.TRY.currency_name} </p>
+            <p> {item.TRY.rate}  </p>
             </div>
             )
             }
-    })} 
-    
-    
-    
-    
-    
+    })}
     </div> 
         )
     }

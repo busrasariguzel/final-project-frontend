@@ -6,6 +6,8 @@ import MemeGenerator from './Meme Generator Components/MemeGenerator'
 import CoronaCases from './Corona Component/CoronaCases'
 import TotalCases from './Corona Component/TotalCases';
 import Animation from './Animation'
+import currency from './Currency Component/Currency'
+import Currency from './Currency Component/Currency';
 
 class App extends Component {
 constructor(){
@@ -21,7 +23,7 @@ constructor(){
 }
 
 getCurrency = () => {
-    axios.get("https://currency-converter5.p.rapidapi.com/currency/historical/2020-01-01?format=json&to=USD&from=TRY&amount=1", {
+    axios.get("https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=TRY&amount=1", {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "currency-converter5.p.rapidapi.com",
@@ -131,8 +133,13 @@ componentDidMount(){
 render(){
     return(
 <div>
-<div className='Corona Cases'>
 <Animation />
+    <div className='Currency'>
+        <h3>Currency section</h3>
+        <Currency  currency={this.state.currency} />
+    </div>
+<div className='Corona Cases'>
+
     <TotalCases cases={this.state.cases}/>
 <CoronaCases cases={this.state.cases}/>
 

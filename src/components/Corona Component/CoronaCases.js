@@ -10,7 +10,8 @@ class CoronaCases extends Component {
 render(){
     return(
         <div>
-{this.props.cases.filter(item => item.cases.total > 90000 && item.country !== 'All' && item.country !== 'North-America' && item.country !== 'Europe' && item.country !== 'Asia' &&item.country !== 'South-America').map((item,idx)=>{
+{this.props.cases.filter(item => item.cases.total > 90000 && item.country !== 'All' && item.country !== 'North-America' && item.country !== 'Europe' && item.country !== 'Asia' &&item.country !== 'South-America')
+.map((item,idx)=>{
     
                 return (
                     <div key={idx}>

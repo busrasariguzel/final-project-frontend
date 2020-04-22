@@ -2,7 +2,7 @@ import React , {Component} from 'react'
 
 class DollarToEuro extends Component{
 
-    constructor(props){
+    constructor(props, currency){
         super()
         }
 
@@ -17,11 +17,7 @@ class DollarToEuro extends Component{
             return (
             <div key={idx}>
             <p> USD / {item.EUR.currency_name} </p>
-            <p> {item.EUR.rate}  </p>
-            <label>Enter the dollar amount you want to convert to Euro </label>< br />
-            <input onChange={this.props.handleConvert} value={this.props.searchTerm} type="text" placeholder="Search.."/>
-            <br />
-            <label>{this.props.searchTerm * item.EUR.rate} </label>
+            <p id="euroRate"> {item.EUR.rate}  </p>
             </div>
             )
             }

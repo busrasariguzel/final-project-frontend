@@ -17,11 +17,8 @@ class DollarToTurkishLira extends Component{
             return (
             <div key={idx}>
             <p> USD / {item.TRY.currency_name} </p>
-            <p> {item.TRY.rate}  </p>
-            <label>Enter the dollar amount you want to convert to Turkish Lira</label>< br />
-            <input onChange={this.props.handleConvert} value={this.props.searchTerm} type="text" placeholder="Search.."/>
-            <br />
-            <label>{this.props.searchTerm * item.TRY.rate} </label>
+            <p id="turkishRate"> {item.TRY.rate}  </p>
+            
             </div>
             )
             }

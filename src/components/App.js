@@ -5,8 +5,8 @@ import NewJournal from './Journal Components/NewJournal';
 import CoronaCases from './Corona Component/CoronaCases'
 import TotalCases from './Corona Component/TotalCases';
 import Animation from './Animation'
-import currency from './Currency Component/Currency'
 import Currency from './Currency Component/Currency';
+import Dropdown from './Currency Component/Dropdown'
 
 class App extends Component {
 constructor(){
@@ -43,14 +43,14 @@ getCurrency = () => {
     });
 
 }
-getCurrency2 = () => {
-    axios.get("https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=EUR&amount=1", {
+getCurrency4 = (currency) => {
+    axios.get(`https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=${currency}&amount=1`, {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "currency-converter5.p.rapidapi.com",
             "x-rapidapi-key": "166a12c160msh0bf532aec0b7a0ep10056ajsncff2841e5dfb"
         }
-    })
+    }) 
     .then(response => {
         // console.log('currency...', response);
         this.setState({ currency2: response.data})
@@ -61,6 +61,25 @@ getCurrency2 = () => {
     });
 
 }
+getCurrency2 = () => {
+    axios.get(`https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=EUR&amount=1`, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "currency-converter5.p.rapidapi.com",
+            "x-rapidapi-key": "166a12c160msh0bf532aec0b7a0ep10056ajsncff2841e5dfb"
+        }
+    }) 
+    .then(response => {
+        // console.log('currency...', response);
+        this.setState({ currency2: response.data})
+        console.log(this.state.currency2)
+    })
+    .catch(err => {
+        console.log(err);
+    });
+
+}
+
 getCurrency3 = () => {
     axios.get("https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=CNY&amount=1", {
         "method": "GET",
@@ -175,7 +194,8 @@ componentDidMount(){
     this.getCurrency();
     this.getCurrency2();
     this.getCurrency3();
-    this.getNews();
+    this.getCurrency4();
+    // this.getNews();
     
 }
 
@@ -183,13 +203,15 @@ render(){
     return(
 <div>
 <Animation />
+
     <div className='Currency'>
         <h3>Currency section</h3>
-        <Currency handleConvert={this.handleConvert} searchTerm={this.state.searchTerm} currency={this.state.currency} currency2={this.state.currency2} currency3={this.state.currency3}/> 
+        <Currency getCurrency4={this.getCurrency4} handleConvert={this.handleConvert} searchTerm={this.state.searchTerm} currency={this.state.currency} currency2={this.state.currency2} currency3={this.state.currency3}/>
+        {/* <Dropdown  currency2={this.state.currency2}/>  */}
     </div>
 <div className='Corona Cases'>
 
-    <TotalCases cases={this.state.cases}/>
+<TotalCases cases={this.state.cases}/>
 <CoronaCases cases={this.state.cases}/>
 
 

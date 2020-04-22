@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Journal from './Journal Components/Journal'
 import NewJournal from './Journal Components/NewJournal';
-import MemeGenerator from './Meme Generator Components/MemeGenerator'
 import CoronaCases from './Corona Component/CoronaCases'
 import TotalCases from './Corona Component/TotalCases';
 import Animation from './Animation'
@@ -21,6 +20,7 @@ constructor(){
         currency2:[],
         currency3:[],
         searchTerm: '',
+        news:[],
     
     }
 }
@@ -79,6 +79,23 @@ getCurrency3 = () => {
     });
 
 }
+getNews = () => {
+    axios.get("https://myallies-breaking-news-v1.p.rapidapi.com/GetTopNews", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "myallies-breaking-news-v1.p.rapidapi.com",
+            "x-rapidapi-key": "166a12c160msh0bf532aec0b7a0ep10056ajsncff2841e5dfb"
+        }
+    })
+    .then(response => {
+        console.log('news......', response);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+}
+
+
 getJournals = () => {
     const url = '/journals';
     axios.get(url).then((journal)=>{
@@ -158,6 +175,7 @@ componentDidMount(){
     this.getCurrency();
     this.getCurrency2();
     this.getCurrency3();
+    this.getNews();
     
 }
 
@@ -181,11 +199,11 @@ render(){
 <NewJournal handleNewJournalSubmit={this.handleNewJournalSubmit} />
 <Journal onDelete={this.onDelete}  onUpdate= {this.onUpdate} journals={this.state.journals}/> 
 </div>
-<div className="generate meme section">
+{/* <div className="generate meme section">
 
 
 <MemeGenerator />  
-</div>  
+</div>   */}
 
 
         

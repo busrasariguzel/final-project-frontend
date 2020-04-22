@@ -19,7 +19,7 @@ constructor(){
         currency: [],
         currency2:[],
         currency3:[],
-        searchTerm: '',
+        currency4:[],
         news:[],
     
     }
@@ -43,8 +43,8 @@ getCurrency = () => {
     });
 
 }
-getCurrency4 = (currency) => {
-    axios.get(`https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=${currency}&amount=1`, {
+getCurrency4 = (currency, amount) => {
+    axios.get(`https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=${currency}&amount=${amount}`, {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "currency-converter5.p.rapidapi.com",
@@ -53,8 +53,8 @@ getCurrency4 = (currency) => {
     }) 
     .then(response => {
         // console.log('currency...', response);
-        this.setState({ currency2: response.data})
-        console.log(this.state.currency2)
+        this.setState({ currency4: response.data})
+        console.log('currency 4...', this.state.currency4)
     })
     .catch(err => {
         console.log(err);
@@ -159,12 +159,7 @@ handleNewJournalSubmit=(event,journal,id)=> {
         this.getJournals();
     })
 }
-handleConvert = (event) => {
-    this.setState({searchTerm:event.target.value}, ()=> {
-        console.log(this.state.searchTerm)
-    })
-    
-};
+
 onDelete = (id) => {
     axios.delete(`/journal/${id}`).then(()=>{
         this.getJournals();
@@ -206,7 +201,7 @@ render(){
 
     <div className='Currency'>
         <h3>Currency section</h3>
-        <Currency getCurrency4={this.getCurrency4} handleConvert={this.handleConvert} searchTerm={this.state.searchTerm} currency={this.state.currency} currency2={this.state.currency2} currency3={this.state.currency3}/>
+        <Currency getCurrency4={this.getCurrency4} handleConvert={this.handleConvert} searchTerm={this.state.searchTerm} currency={this.state.currency} currency2={this.state.currency2} currency3={this.state.currency3} currency4={this.state.currency4}/>
         {/* <Dropdown  currency2={this.state.currency2}/>  */}
     </div>
 <div className='Corona Cases'>

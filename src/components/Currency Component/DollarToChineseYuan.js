@@ -9,6 +9,8 @@ class DollarToChineseYuan extends Component{
     render(){
         const rate = this.props.currency3
         const obj = Object.values(rate)
+        const conversion = this.props.currency4
+        const obj2 = Object.values(conversion)
         return (
             <div>
     {/* <p>{this.props.currency3.base_currency_code}</p>/ */}
@@ -23,6 +25,21 @@ class DollarToChineseYuan extends Component{
             )
             }
     })} 
+    {obj2.map((item, idx)=>{
+        if (typeof item === 'object') {
+            if(item.CNY){
+                return (
+                    <div key={idx}>
+                    <p> Conversion Result : {item.CNY.rate_for_amount}  </p>
+                    
+                    </div>
+                    )
+                    } 
+            }
+         
+            
+
+    })}
     </div> 
         )
     }

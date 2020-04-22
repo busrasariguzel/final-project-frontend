@@ -9,6 +9,8 @@ class DollarToEuro extends Component{
     render(){
         const rate = this.props.currency2
         const obj = Object.values(rate)
+        const conversion = this.props.currency4
+        const obj2 = Object.values(conversion)
         return (
             <div>
     {/* <p>{this.props.currency2.base_currency_code}</p>/ */}
@@ -23,7 +25,21 @@ class DollarToEuro extends Component{
             }
     })} 
     
-    
+    {obj2.map((item, idx)=>{
+        if (typeof item === 'object') {
+            if(item.EUR){
+                return (
+                    <div key={idx}>
+                    <p > {item.EUR.rate_for_amount}  </p>
+                    
+                    </div>
+                    )
+                    } 
+            }
+         
+            
+
+    })}
     
     
     

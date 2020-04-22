@@ -9,6 +9,8 @@ class DollarToTurkishLira extends Component{
     render(){
         const rate = this.props.currency
         const obj = Object.values(rate)
+        const conversion = this.props.currency4
+        const obj2 = Object.values(conversion)
         return (
             <div>
     {/* <p>{this.props.currency.base_currency_code}</p>/ */}
@@ -30,6 +32,21 @@ class DollarToTurkishLira extends Component{
 <input onChange={this.props.handleConvert} value={this.props.searchTerm} type="text" placeholder="Search.."/>
 
 </div> */}
+{obj2.map((item, idx)=>{
+        if (typeof item === 'object') {
+            if(item.TRY){
+                return (
+                    <div key={idx}>
+                    <p id="turkishRate"> {item.TRY.rate_for_amount}  </p>
+                    
+                    </div>
+                    )
+                    } 
+            }
+         
+            
+
+    })}
 
     
     </div> 

@@ -21,6 +21,7 @@ constructor(){
         currency3:[],
         currency4:[],
         news:[],
+        casesByState:[],
     
     }
 }
@@ -144,7 +145,22 @@ getCoronaResults =() => {
 	console.log(err);
 });
 }
-
+getCoronaByState = () => {
+    axios.get("https://covid19-data.p.rapidapi.com/us", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "covid19-data.p.rapidapi.com",
+		"x-rapidapi-key": "166a12c160msh0bf532aec0b7a0ep10056ajsncff2841e5dfb"
+	}
+})
+.then(response => {
+    console.log('get corona by state...' , response.data.list)
+    // return this.setState({ casesByState: response.data.response})
+})
+.catch(err => {
+	console.log(err);
+});
+}
 
 
 handleNewJournalSubmit=(event,journal,id)=> {
@@ -190,6 +206,7 @@ componentDidMount(){
     this.getCurrency2();
     this.getCurrency3();
     this.getCurrency4();
+    this.getCoronaByState();
     // this.getNews();
     
 }

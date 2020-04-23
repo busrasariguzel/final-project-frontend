@@ -22,6 +22,7 @@ return(
             <p>New Cases : {item.cases.new}</p>
             <p>New Deaths : {item.deaths.new}</p>
             <p>Recovered: {item.cases.recovered}</p>
+            <p>Critical: {item.cases.critical}</p>
         
 </div>
 )

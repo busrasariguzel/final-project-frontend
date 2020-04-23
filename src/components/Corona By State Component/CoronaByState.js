@@ -16,7 +16,8 @@ render(){
                 return (
                     <div key={idx}>
                     
-                <p> STATE NAME: {item.state}</p>
+                <p> {item.state}</p>
+                <p>{item.confirmed}</p>
                     </div>
                 )
             }

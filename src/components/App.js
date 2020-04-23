@@ -6,7 +6,8 @@ import CoronaCases from './Corona Component/CoronaCases'
 import TotalCases from './Corona Component/TotalCases';
 import Animation from './Animation'
 import Currency from './Currency Component/Currency';
-import Dropdown from './Currency Component/Dropdown'
+import Dropdown from './Currency Component/Dropdown';
+import CoronaByState from './Corona By State Component/CoronaByState'
 
 class App extends Component {
 constructor(){
@@ -155,7 +156,7 @@ getCoronaByState = () => {
 })
 .then(response => {
     console.log('get corona by state...' , response.data.list)
-    // return this.setState({ casesByState: response.data.response})
+    return this.setState({ casesByState: response.data.list})
 })
 .catch(err => {
 	console.log(err);
@@ -225,6 +226,7 @@ render(){
 
 <TotalCases cases={this.state.cases}/>
 <CoronaCases cases={this.state.cases}/>
+<CoronaByState casesByState={this.state.casesByState} />
 
 
 </div>

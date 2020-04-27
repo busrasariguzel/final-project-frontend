@@ -5,7 +5,8 @@ class Animation extends Component {
   render () {
     return (
       <Typical
-        steps={["Welcome to Busra's Dashboard ", 1000, 'Hello world!', 500]}
+      style={{fontSize:'50px'}}
+        steps={["Welcome to Busra's Dashboard ", 1000, 'Enjoy my app!', 500]}
         loop={Infinity}
         wrapper="p"
       />

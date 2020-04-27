@@ -10,7 +10,7 @@ class TotalCases extends Component {
     
 render(){
     return(
-<div>
+<div style={{border:'0.5px solid grey'}}>
         {this.props.cases.filter(item => item.country === 'All').map((item, idx) => {
             console.log(item)
 return(

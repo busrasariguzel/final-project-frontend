@@ -29,16 +29,18 @@ render(){
     console.log('OBJ....', obj)
     return(
         <div>
-            <DropdownStates />
+    
 {this.props.casesByState
 .map((item,idx)=>{
     
                 return (
                     <div key={idx}>
                     
-                <p> {item.state}</p>
-                
+            
                     </div>
+                    
+
+
                 )
             }
             )} 
@@ -60,117 +62,99 @@ render(){
             <option value="New Jersey">New Jersey</option>
             <option value="South Carolina">South Carolina</option>
             <option value="Louisiana">Louisiana</option>
+            <option value="Virginia">Virginia</option>
+I           <option value="Idaho">Idaho</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+<option value="Washington">Washington</option>
+<option value="Wisconsin">Wisconsin</option>
+
+<option value="Vermont">Vermont</option>
+
+<option value="Minnesota">Minnesota</option>
+
+<option value="Florida">Florida</option>
+
+<option value="North Carolina">North Carolina</option>
+
+<option value="California">California</option>
 
 
-<option value="New Jersey"></option>Virginia
+<option value="Wyoming">Wyoming</option>
 
-I<option value="New Jersey"></option>daho
+<option value="Michigan">Michigan</option>
 
-<option value="New Jersey"></option>Iowa
+<option value="Maryland">Maryland</option>
 
-<option value="New Jersey"></option>Kentucky
+<option value="Alaska">Alaska</option>
 
-<option value="New Jersey"></option>Missouri
+<option value="Kansas">Kansas</option>
 
-<option value="New Jersey"></option>Oklahoma
+<option value="Tennessee">Tennessee</option>
 
-<option value="New Jersey"></option>Colorado
+<option value="Texas">Texas</option>
 
-<option value="New Jersey"></option>Illinois
+<option value="Maine">Maine</option>
 
-<option value="New Jersey"></option>Indiana
+<option value="Arizona">Arizona</option>
 
-<option value="New Jersey"></option>Mississippi
+G<option value="Georgia">Georgia</option>
 
-<option value="New Jersey"></option>Nebraska
-<option value="New Jersey"></option>
-<option value="New Jersey"></option>Ohio
+<option value="Arkansas">Arkansas</option>
 
-<option value="New Jersey"></option>Pennsylvania
+<option value="South Dakota">South Dakota</option>
 
-<option value="New Jersey"></option>Washington
+<option value="Alabama">Alabama</option>
 
-<option value="New Jersey"></option>Wisconsin
+<option value="West Virginia">West Virginia</option>
 
-<option value="New Jersey"></option>Vermont
+<option value="West Virginia">West Virginia</option>
+<option value="North Dakota">North Dakota</option>
 
-<option value="New Jersey"></option>Minnesota
+<option value="Massachusetts">Massachusetts</option>
 
-<option value="New Jersey"></option>Florida
+<option value="Utah">Utah</option>
 
-<option value="New Jersey"></option>North Carolina
+<option value="Montana">Montana</option>
 
-<option value="New Jersey"></option>California
+<option value="New Hampshire">New Hampshire</option>
 
-<option value="New Jersey"></option>New York
+<option value="Oregon">Oregon</option>
 
-<option value="New Jersey"></option>Wyoming
+<option value="New Mexico">New Mexico</option>
 
-<option value="New Jersey"></option>Michigan
+<option value="Rhode Island">Rhode Island</option>
 
-<option value="New Jersey"></option>M<option value="New Jersey"></option>aryland
+<option value="Nevada">Nevada</option>
 
-<option value="New Jersey"></option>Alaska
+D<option value="District of Columbia">District of Columbia</option>
 
-<option value="New Jersey"></option>Kansas
+<option value="Connecticut">Connecticut</option>
 
-<option value="New Jersey"></option>Tennessee
+<option value="Hawaii">Hawaii</option>
 
-<option value="New Jersey"></option>Texas
+<option value="Delaware">Delaware</option>
 
-<option value="New Jersey"></option>Maine
+<option value="Diamond Princess">Diamond Princess</option>
 
-<option value="New Jersey"></option>Arizona
+<option value="Grand Princess">Grand Princess</option>
 
-G<option value="New Jersey"></option>eorgia
+<option value="Guam">Guam</option>
 
-<option value="New Jersey"></option>Arkansas
+<option value="Northern Mariana Islands">Northern Mariana Islands</option>
 
-N<option value="New Jersey"></option>ew Jersey
+<option value="Puerto Rico">Puerto Rico</option>
 
-<option value="New Jersey"></option>South Dakota
-
-<option value="New Jersey"></option>Alabama
-
-<option value="New Jersey"></option>West Virginia
-
-North Dakota
-
-Massachusetts
-
-Utah
-
-Montana
-
-New Hampshire
-
-Oregon
-
-New Mexico
-
-Rhode Island
-
-Nevada
-
-District of Columbia
-
-Connecticut
-
-Hawaii
-
-Delaware
-
-Diamond Princess
-
-Grand Princess
-
-Guam
-
-Northern Mariana Islands
-
-Puerto Rico
-
-Virgin Islands
+<option value="Virgin Islands">Virgin Islands</option>
             </select>
             </label><br />
             </form>
@@ -180,14 +164,16 @@ Virgin Islands
             if(item.state === this.state.usaState ){
                 return (
                     <div key={idx}>
-                    <p> {item.state}</p>
-                    <p>{item.confirmed}</p> 
-                    
+                        
+                        
+                    <p style={{color:'navy', textDecoration:'underline'}}> {item.state}</p>
+                    <p>Confirmed Cases: {item.confirmed}</p> 
+                    <p>Confirmed Deaths: {item.deaths}</p> 
                     </div>
                     )
                     } 
             }
-         
+        
             
 
     })}

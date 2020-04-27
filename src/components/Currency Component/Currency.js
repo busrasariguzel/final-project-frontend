@@ -3,7 +3,7 @@ import DollarToTurkishLira from './DollarToTurkishLira';
 import DollarToEuro from './DollarToEuro';
 import DollarToChineseYuan from './DollarToChineseYuan';
 import Dropdown from './Dropdown';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 class Currency extends Component {
     constructor(props) {
@@ -44,12 +44,7 @@ Currency.propTypes = {
     handleChange: PropTypes.func,
     handleSubmit: PropTypes.func,
     handleConvert: PropTypes.func,
-    currency3 : PropTypes.objectOf,
-    currency4 : PropTypes.objectOf,
-    currency2 : PropTypes.objectOf,
-    currency : PropTypes.objectOf,
-    getCurrency4 : PropTypes.func,
-
+    
     
 }
 export default Currency

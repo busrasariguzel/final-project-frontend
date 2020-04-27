@@ -242,7 +242,7 @@ render(){
     console.log('cases....' , this.state.cases)
     return(
         
-<div>
+<div >
 <Animation style={{size:'50px'}}/>
 
 
@@ -250,12 +250,12 @@ render(){
         <h3>Currency section</h3>
         <Currency getCurrency4={this.getCurrency4} handleConvert={this.handleConvert} searchTerm={this.state.searchTerm} currency={this.state.currency} currency2={this.state.currency2} currency3={this.state.currency3} currency4={this.state.currency4}/>
         {/* <Dropdown  currency2={this.state.currency2}/>  */}
-    </div>
+    </div><br />
 <div className='Corona Cases'>
 
 <TotalCases cases={this.state.cases}/>
 <br />
-<Search cases={this.state.cases}/>
+<Search cases={this.state.cases}/><br />
 <CoronaCases cases={this.state.cases}/>
 <CoronaByState casesByState={this.state.casesByState} />
 

@@ -18,12 +18,12 @@ const JournalEntry = (
 
 
 
-    <button style={{color:'red', margin:'10px 15px'}} 
+    <button className="ui pink button"
 onClick={()=>{
 return onDelete(id)
 }}
 >Delete</button>
-<button  style={{ color: 'green', margin:'10px 15px'}} 
+<button  className="ui purple button"
 onClick={()=>{
 return onUpdate(id)
 }}>Update</button>

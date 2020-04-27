@@ -1,6 +1,6 @@
 # `Busra's Dashboard`
 
-Busra's Dashboard is a full stack project which is combined of a backend and frontend projects. In the app, yo can : 
+Busra's Dashboard is a full stack project which is combined of a backend and frontend apps. In the app, you can : 
 
 - Display daily currencies
 - Checkout the COVID-19 data of the world, each country, and each USA states
@@ -9,8 +9,9 @@ Busra's Dashboard is a full stack project which is combined of a backend and fro
 ----
 ## `Motivation`
 
-My motivation to do this project is both learn more about React, and make a project that is useful for many people. Since we are going through hard times as a whole world, I thought sharing Coronavirus data would be beneficial to many people. Currency section of the app is also useful for many people as it displays the recent currency rates. 
-My motivation for the gratitude journal is to make people realize how many  blessings they have. According to studies, keeping a gratitude journal would make people happier compare to ones who do not.
+My motivation for doing this project is both to learn more about React, and to make a project that is useful for many people. Since we are going through hard times as a whole world due to the pandemic, I thought sharing Coronavirus data would be beneficial to many people. 
+Currency section of the app is also useful for many people as it displays the recent currency rates. 
+My motivation for the gratitude journal is to make people realize how many blessings they have in their lives. According to studies, keeping a gratitude journal would make people happier compare to ones who do not. I wanted to impact people's lives while learning about react.
 
 
 ---
@@ -60,7 +61,7 @@ My motivation for the gratitude journal is to make people realize how many  bles
 ## `Contributing`
 
 You can easily contribute to Busra's fitness app.
-Al you have to do is:
+All you have to do is:
 1. Fork this repo.
 2. Clone it to your computer
 3. Edit and contribute as you want!
@@ -68,7 +69,7 @@ Al you have to do is:
 
 ## `API Reference`
 
-You can find the API reference link below:
+`Below is the list of API's that are used in this project`
 
 To get the Turkish Lira to USD currency rate:
 

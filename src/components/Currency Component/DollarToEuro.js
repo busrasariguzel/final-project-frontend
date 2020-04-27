@@ -49,8 +49,8 @@ class DollarToEuro extends Component{
     }
 }
 DollarToEuro.propTypes = {
-    currency4 : PropTypes.objectOf,
-    currency2 : PropTypes.objectOf,
+    // currency4 : PropTypes.objectOf,
+    // currency2 : PropTypes.objectOf,
     
 
     

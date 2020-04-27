@@ -56,8 +56,8 @@ class DollarToTurkishLira extends Component{
 }
 
 DollarToTurkishLira.propTypes = {
-    currency4 : PropTypes.objectOf,
-    currency : PropTypes.objectOf,
+    // currency4 : PropTypes.objectOf,
+    // currency : PropTypes.objectOf,
     
 
     

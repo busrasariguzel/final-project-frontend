@@ -72,7 +72,7 @@ render(){
                 />
 
                 </div>
-                <button type="submit" >Submit</button>
+                <button class="ui pink button" type="submit" >Submit</button>
             </form>
         </div>
     )

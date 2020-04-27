@@ -47,8 +47,8 @@ class DollarToChineseYuan extends Component{
     }
 }
 DollarToChineseYuan.propTypes = {
-    currency4 : PropTypes.objectOf,
-    currency3 : PropTypes.objectOf,
+    // currency4 : PropTypes.objectOf,
+    // currency3 : PropTypes.objectOf,
     
 
     

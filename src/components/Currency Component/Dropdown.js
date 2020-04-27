@@ -42,9 +42,13 @@ class Dropdown extends Component {
             </select>
           </label><br />
           <label>Enter the dollar amount  :</label>< br />
-            <input onChange={this.handleConvert} value={this.state.searchTerm} type="text" placeholder="amount.."/>
+          <div className="ui right labeled input">
+  <div className="ui basic label">$</div>
+  <input onChange={this.handleConvert} value={this.state.searchTerm} type="text" placeholder="Amount" />
+  <div className="ui label">.00</div>
+</div>
             <br />
-          <input type="submit" value="Submit" />
+          <input className="ui violet inverted button"type="submit" value="Submit" />
         </form>
       );
     }

@@ -28,13 +28,12 @@ class SearchCorona extends Component {
                 <form 
                 // onSubmit={this.handleSubmit}
                 >
-    <div >
-    <input onChange={this.handleChange} value={this.state.country} type="text" placeholder="search by country.."/>
-            <br />
-        {/* <input type="submit" value="Submit" /> */}
-    </div>
 
-
+    
+<div class="ui large icon input">
+    <input type="text" onChange={this.handleChange} value={this.state.country} type="text" placeholder="search by country.."/>
+    <i aria-hidden="true" class="search icon"></i>
+  </div>
     </form>
 
     {this.props.cases

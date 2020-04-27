@@ -1,5 +1,7 @@
-import React, {Component} from 'react'
-import EachCoronaCase from './EachCoronaCase'
+import React, {Component} from 'react';
+import EachCoronaCase from './EachCoronaCase';
+import SearchCorona from './Search'
+
 
 class CoronaCases extends Component {
     constructor(props){
@@ -15,8 +17,9 @@ render(){
     
                 return (
                     <div key={idx}>
-                        
+                    {/* <SearchCorona item={item} idx={idx}/> */}
                     <EachCoronaCase  item={item} idx={idx}/>
+                    
                     </div>
                 )
             }

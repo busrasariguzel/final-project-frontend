@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import SearchCorona from './Search';
 
 
 class TotalCases extends Component {
@@ -27,6 +28,7 @@ return(
 </div>
 )
         })}
+        <SearchCorona />
         
         
         </div>

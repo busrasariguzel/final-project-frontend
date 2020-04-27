@@ -1,68 +1,108 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# `Busra's Dashboard`
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+----
+## `Motivation`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## `Screenshots`
+Here are some examples of my code from the app:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+BMI get and post routes:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![bmi code](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.43.00&#32;PM.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Workout Schema:
 
-### `npm run eject`
+![workout schema](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.46.55&#32;PM.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Update profile routes:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![update profile routes](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.47.12&#32;PM.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Ejs partials/header:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![ejs header](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.47.29&#32;PM.png)
 
-## Learn More
+Calories Schema:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![calories model](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.47.46&#32;PM.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+---
+## `Contributing`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+You can easily contribute to Busra's fitness app.
+Al you have to do is:
+1. Fork this repo.
+2. Clone it to your computer
+3. Edit and contribute as you want!
+---
 
-### Analyzing the Bundle Size
+## `API Reference`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+You can find the API reference link below:
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+---
+## `How to Install?` 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+#### `Clone`
+You can clone my repository as below:
 
-### Deployment
+```
+git clone https://github.com/busrasariguzel/final-project-frontend
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### `Setup`
+
+The setup instructions are:
+
+```
+npm install 
+cd final-project-frontend
+code .
+```
+---
+
+## `How to use?`
+After you install the app, you can go to your browser and start using Busra's Fitness App!
+Here are the steps:
+1. You can put http://localhost:3000/home to your browser to enjoy desktop version of the app!
+2. The essential routes are written below to help you use the app smoothly and easily.
+
+
+---
+## `Routes`
+You can find important routes below:
+
+#### `Index routes`
+
+
+
+
+---
+
+
+
+
+---
+
+## `Try It Live`
+
+You can try out the app by using this link:
+https://busrasariguzel-fitness-app.herokuapp.com/
+
+## `License`
+
+Busra Tech ©
+
+---

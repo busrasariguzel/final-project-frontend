@@ -1,30 +1,48 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, {Component} from 'react'
 
-const Search = (props) => {
+class SearchCorona extends Component {
+    constructor(props){
+        super()
+        this.state={
+            country:''
+        }
+        
+        
+
+    }
+    handleChange = (event)=> {
+        this.setState({country: event.target.value});
+        
+    }
+render(){
     return(
+
         <div>
-    
-<form >
+
+                <div key={this.props.idx}>
+                <form>
     <div >
-<input onChange={props.handleChange}
-type="text" placeholder="Search by country..."
-value={props.searchTerm}/>
+    <input onChange={this.handleChange} value={this.state.country} type="text" placeholder="search by country.."/>
+            <br />
+        <input type="submit" value="Submit" />
     </div>
 
 
 </form>
 
 
+                    <p style={{color:'blue', textDecoration:'underline'}}>{this.props.item.country}</p>
+                    <p>Total Cases: {this.state.country}</p>
+                    <p>New Cases: {this.props.item.cases.new}</p>
+                    <p>Total Deaths: {this.props.item.deaths.total}</p>
+                    <p>New Deaths : {this.props.item.deaths.new}</p>
+                    <p>Recovered: {this.props.item.cases.recovered}</p>
+                    <p>Critical: {this.props.item.cases.critical}</p>
 
+                </div>
         </div>
-    )
-}
+                )
+            }
+            } 
 
-
-Search.propTypes = {
-    handleChange : PropTypes.func,
-    searchTerm: PropTypes.string,
-}
-
-export default Search;
+export default SearchCorona

@@ -52,7 +52,15 @@ Al you have to do is:
 
 You can find the API reference link below:
 
+https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=TRY&amount=1
 
+https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=EUR&amount=1
+
+https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=CNY&amount=1
+
+https://covid-193.p.rapidapi.com/statistics
+
+https://covid19-data.p.rapidapi.com/us
 
 ---
 ## `How to Install?` 
@@ -68,7 +76,7 @@ git clone https://github.com/busrasariguzel/final-project-frontend
 
 #### `Setup`
 
-The setup instructions are:
+After you clone the repository, you can setup  the app by:
 
 ```
 npm install 
@@ -85,25 +93,7 @@ Here are the steps:
 
 
 ---
-## `Routes`
-You can find important routes below:
 
-#### `Journal routes`
-
-
-
-
----
-
-
-
-
----
-
-## `Try It Live`
-
-You can try out the app by using this link:
-https://busrasariguzel-fitness-app.herokuapp.com/
 
 ## `License`
 

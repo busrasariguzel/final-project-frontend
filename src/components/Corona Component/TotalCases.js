@@ -28,7 +28,7 @@ return(
 </div>
 )
         })}
-        <SearchCorona />
+
         
         
         </div>

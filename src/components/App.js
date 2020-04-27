@@ -242,7 +242,7 @@ render(){
     return(
         
 <div>
-<Animation />
+<Animation style={{size:'50px'}}/>
 
 
     <div className='Currency'>

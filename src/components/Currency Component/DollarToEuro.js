@@ -19,6 +19,7 @@ class DollarToEuro extends Component{
         if (typeof item === 'object') {
             return (
             <div key={idx}>
+            <i class="euro icon big"></i>
             <p> USD / {item.EUR.currency_name} </p>
             <p id="euroRate"> {item.EUR.rate}  </p>
             </div>

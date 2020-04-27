@@ -18,6 +18,12 @@ class Currency extends Component {
                 justifyContent: 'space-between'
             }}>
 
+{/* <i class="icons"> */}
+    <i class="big dollar icon"></i>  
+    <i class="big right arrow icon"> &nbsp; 
+    </i>
+    {/* </i> */}
+
                 <DollarToTurkishLira handleConvert={this.props.handleConvert} currency4={this.props.currency4} searchTerm={this.props.searchTerm} currency={this.props.currency} />
                 <DollarToEuro handleConvert={this.props.handleConvert} currency4={this.props.currency4} searchTerm={this.props.searchTerm} currency2={this.props.currency2} />
                 <DollarToChineseYuan handleConvert={this.props.handleConvert} currency4={this.props.currency4} searchTerm={this.props.searchTerm} currency3={this.props.currency3} />

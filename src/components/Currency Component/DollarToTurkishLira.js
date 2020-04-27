@@ -19,7 +19,8 @@ class DollarToTurkishLira extends Component{
         if (typeof item === 'object') {
             return (
             <div key={idx}>
-            <p> USD / {item.TRY.currency_name} </p>
+                <i class="big lira icon"></i>
+            <p> USD / {item.TRY.currency_name} </p> 
             <p id="turkishRate"> {item.TRY.rate}  </p>
             
             </div>

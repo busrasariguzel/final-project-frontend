@@ -19,6 +19,7 @@ class DollarToChineseYuan extends Component{
         if (typeof item === 'object') {
             return (
                 <div key={idx}>
+                    <i class="big yen icon"></i>
             <p> USD / {item.CNY.currency_name} </p>
             <p id="chineseRate"> {item.CNY.rate}  </p>
             

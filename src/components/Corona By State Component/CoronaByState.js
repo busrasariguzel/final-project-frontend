@@ -52,12 +52,14 @@ render(){
 
 
             <label>
-            Select your state:
+
+            {/* <h3 class="ui orange header ui block header" >Select your state:</h3> */}
             <select 
+            class="ui orange header ui fluid multiple search selection dropdown" 
             value={this.state.usaState} 
             onChange={this.handleChange}
             >
-            <option value="">Select</option>
+            <option value="">Select your state</option>
             <option value="New York">New York</option>
             <option value="Washington">Washington</option>
             <option value="New Jersey">New Jersey</option>
@@ -108,7 +110,7 @@ I           <option value="Idaho">Idaho</option>
 
 <option value="Arizona">Arizona</option>
 
-G<option value="Georgia">Georgia</option>
+<option value="Georgia">Georgia</option>
 
 <option value="Arkansas">Arkansas</option>
 
@@ -167,9 +169,33 @@ D<option value="District of Columbia">District of Columbia</option>
                     <div key={idx}>
                         
                         
-                    <p style={{color:'navy', textDecoration:'underline'}}> {item.state}</p>
-                    <p>Confirmed Cases: {item.confirmed}</p> 
-                    <p>Confirmed Deaths: {item.deaths}</p> 
+            <h1 class=" ui segment ui red header ui top attached header ui red header"> {item.state}
+            &nbsp;
+  <i class="us flag"></i>
+ 
+
+            
+            
+            </h1>
+            
+            <div class="ui attached segment">
+    <div role="list" class="ui divided selection list">
+    <div role="listitem" class="item">
+    <div class="ui blue horizontal label">Total Cases</div>
+    : {item.confirmed}
+    </div>
+    </div>
+    <div role="list" class="ui divided selection list">
+    <div role="listitem" class="item">
+    <div class="ui green horizontal label">Total Deaths</div>
+    : {item.deaths}
+    </div>
+    </div>
+    
+   
+    
+   
+    </div>
                     </div>
                     )
                     } 

@@ -1,11 +1,15 @@
 # `Busra's Dashboard`
 
-
-
+Busra's Dashboard is a full stack project which is combined of a backend and frontend projects. In the app, yo can : 
+-Display daily currencies
+-Checkout the COVID-19 data of the world, each country, and each USA states
+- Keep a journal of your blessings
 
 ----
 ## `Motivation`
 
+My motivation to do this project is both learn more about React, and make a project that is useful for many people. Since we are going through hard times as a whole world, I thought sharing Coronavirus data would be beneficial to many people. Currency section of the app is also useful for many people as it displays the recent currency rates. 
+My motivation for the gratitude journal is to make people realize how many  blessings they have. According to studies, keeping a gratitude journal would make people happier compare to ones who do not.
 
 
 ---
@@ -13,11 +17,11 @@
 ## `Screenshots`
 Here are some examples of my code from the app:
 
-BMI get and post routes:
+Gratitude Journal Mode:
 
-![bmi code](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.43.00&#32;PM.png)
+![journal model](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.43.00&#32;PM.png)
 
-Workout Schema:
+Corona Cases:
 
 ![workout schema](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.46.55&#32;PM.png)
 
@@ -84,7 +88,7 @@ Here are the steps:
 ## `Routes`
 You can find important routes below:
 
-#### `Index routes`
+#### `Journal routes`
 
 
 

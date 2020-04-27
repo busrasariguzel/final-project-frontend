@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 
-class Dropdown extends Component {
+class DropdownStates extends Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -30,21 +30,22 @@ class Dropdown extends Component {
       
   };
     render() {
+     
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            Pick your currency:
+            Select Your State:
             <select value={this.state.value} onChange={this.handleChange}>
               <option value="empty">Select</option>
-              <option value="TRY">Turkish Lira</option>
-              <option value="EUR">Euro</option>
-              <option value="CNY">Chinese Yuan</option>
+              <option value="New York">New York</option>
+              <option value="New Jersey">New Jersey</option>
+              <option value="California">California</option>
             </select>
           </label><br />
-          <label>Enter the dollar amount  :</label>< br />
+          {/* <label>Enter the dollar amount  :</label>< br />
             <input onChange={this.handleConvert} value={this.state.searchTerm} type="text" placeholder="amount.."/>
             <br />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" /> */}
         </form>
       );
     }
@@ -52,4 +53,4 @@ class Dropdown extends Component {
 
 
 
-  export default Dropdown
+  export default DropdownStates

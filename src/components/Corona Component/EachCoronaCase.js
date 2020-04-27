@@ -4,6 +4,7 @@ class EachCoronaCase extends Component {
     constructor(props){
         super()
         
+        
 
     }
 render(){

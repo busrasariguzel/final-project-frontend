@@ -173,8 +173,6 @@ D<option value="District of Columbia">District of Columbia</option>
                     )
                     } 
             }
-        
-            
 
     })}
 

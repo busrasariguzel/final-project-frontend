@@ -15,6 +15,7 @@ render(){
     
                 return (
                     <div key={idx}>
+                        
                     <EachCoronaCase  item={item} idx={idx}/>
                     </div>
                 )

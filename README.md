@@ -1,8 +1,9 @@
 # `Busra's Dashboard`
 
 Busra's Dashboard is a full stack project which is combined of a backend and frontend projects. In the app, yo can : 
--Display daily currencies
--Checkout the COVID-19 data of the world, each country, and each USA states
+
+- Display daily currencies
+- Checkout the COVID-19 data of the world, each country, and each USA states
 - Keep a journal of your blessings
 
 ----
@@ -15,27 +16,44 @@ My motivation for the gratitude journal is to make people realize how many  bles
 ---
 
 ## `Screenshots`
-Here are some examples of my code from the app:
+ ###  `Here are some examples of my code from the app:`
 
-Gratitude Journal Mode:
+### `Journal Routes:`
 
-![journal model](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.43.00&#32;PM.png)
+![journal model](/public/images/Screen%20Shot%202020-04-27%20at%2010.31.36%20AM.png)
 
-Corona Cases:
 
-![workout schema](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.46.55&#32;PM.png)
+### `Getting the USD to Euro rate:`
 
-Update profile routes:
+![ejs header](/public/images/Screen%20Shot%202020-04-27%20at%2010.34.38%20AM.png)
 
-![update profile routes](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.47.12&#32;PM.png)
+### `Converting the given amount to selected currency:`
 
-Ejs partials/header:
+![calories model](/public/images/Screen%20Shot%202020-04-27%20at%2010.35.38%20AM.png)
 
-![ejs header](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.47.29&#32;PM.png)
+### `Api call for COVID-19  data:`
 
-Calories Schema:
+![update profile routes](/public/images/Screen%20Shot%202020-04-27%20at%2010.36.25%20AM.png)
 
-![calories model](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.47.46&#32;PM.png)
+### `API call to backend and 3rd API call for Coronavirus cases worldwide:`
+
+![ejs header](/public/images/Screen%20Shot%202020-04-27%20at%2010.36.38%20AM.png)
+
+### `Api call for currency rates:`
+
+![calories model](/public/images/Screen%20Shot%202020-04-27%20at%2010.37.53%20AM.png)
+
+### `Api call for COVID-19  data by USA states:`
+
+![calories model](/public/images/Screen%20Shot%202020-04-27%20at%2010.38.26%20AM.png)
+### `Displaying the Covid-19 data for each country:`
+
+![calories model](/public/images/Screen%20Shot%202020-04-27%20at%2010.38.55%20AM.png)
+
+### `Displaying the worldwide Covid-19 data:`
+
+![calories model](/public/images/Screen%20Shot%202020-04-27%20at%2010.39.36%20AM.png)
+
 
 
 ---
@@ -52,13 +70,23 @@ Al you have to do is:
 
 You can find the API reference link below:
 
+To get the Turkish Lira to USD currency rate:
+
 https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=TRY&amount=1
+
+To get the Euro to USD currency rate:
 
 https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=EUR&amount=1
 
+To get the USD to Chinese Yuan currency rate:
+
 https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=CNY&amount=1
 
+To get the Coronavirus data by countries and the total:
+
 https://covid-193.p.rapidapi.com/statistics
+
+To get the Coronavirus data by USA states:
 
 https://covid19-data.p.rapidapi.com/us
 
@@ -70,6 +98,7 @@ You can clone my repository as below:
 
 ```
 git clone https://github.com/busrasariguzel/final-project-frontend
+git clone https://github.com/busrasariguzel/final-project-backend
 ```
 
 
@@ -81,18 +110,32 @@ After you clone the repository, you can setup  the app by:
 ```
 npm install 
 cd final-project-frontend
-code .
+npm start
+```
+
+```
+npm install 
+cd final-project-backend
+npm run dev
 ```
 ---
 
 ## `How to use?`
-After you install the app, you can go to your browser and start using Busra's Fitness App!
+After you install the app, you can go to your browser and start using Busra's Dashboard App!
 Here are the steps:
-1. You can put http://localhost:3000/home to your browser to enjoy desktop version of the app!
-2. The essential routes are written below to help you use the app smoothly and easily.
+1. You can put http://localhost:3000 to your browser to enjoy desktop version of the app!
+2. Don't forget to install and run both frontend and backend projects to get them working.
 
 
 ---
+## `Routes`
+You can find important routes for backend app below:
+
+#### `Journal routes`
+
+- /journal/:id - Gets a single journal entry with an id
+- /journals - Gets all the journals
+
 
 
 ## `License`

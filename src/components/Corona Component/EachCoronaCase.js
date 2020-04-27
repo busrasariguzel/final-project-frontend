@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 
 class EachCoronaCase extends Component {
     constructor(props){
@@ -25,6 +26,12 @@ render(){
                 )
             }
             } 
-            
+
+            EachCoronaCase.propTypes = {
+                item: PropTypes.string,
+                
+                
+            }
+
 
 export default EachCoronaCase

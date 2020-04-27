@@ -1,4 +1,5 @@
-import React , {Component} from 'react'
+import React , {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class DollarToTurkishLira extends Component{
 
@@ -54,5 +55,11 @@ class DollarToTurkishLira extends Component{
     }
 }
 
+DollarToTurkishLira.propTypes = {
+    currency4 : PropTypes.objectOf,
+    currency : PropTypes.objectOf,
+    
 
+    
+}
 export default DollarToTurkishLira

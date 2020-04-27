@@ -1,4 +1,5 @@
-import React , {Component} from 'react'
+import React , {Component} from 'react';
+import PropTypes from 'prop-types'
 
 class DollarToChineseYuan extends Component{
 
@@ -31,7 +32,7 @@ class DollarToChineseYuan extends Component{
                 return (
                     <div key={idx}>
                         {console.log(item)}
-                    <p> Conversion Result : {item.CNY.rate_for_amount}  </p>
+                    <p>  {item.CNY.rate_for_amount}  </p>
                     
                     </div>
                     )
@@ -45,6 +46,12 @@ class DollarToChineseYuan extends Component{
         )
     }
 }
+DollarToChineseYuan.propTypes = {
+    currency4 : PropTypes.objectOf,
+    currency3 : PropTypes.objectOf,
+    
 
+    
+}
 
 export default DollarToChineseYuan

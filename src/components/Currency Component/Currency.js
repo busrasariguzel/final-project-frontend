@@ -1,16 +1,17 @@
-import React, { Component } from 'react'
-import DollarToTurkishLira from './DollarToTurkishLira'
-import DollarToEuro from './DollarToEuro'
-import DollarToChineseYuan from './DollarToChineseYuan'
-import Dropdown from './Dropdown'
+import React, { Component } from 'react';
+import DollarToTurkishLira from './DollarToTurkishLira';
+import DollarToEuro from './DollarToEuro';
+import DollarToChineseYuan from './DollarToChineseYuan';
+import Dropdown from './Dropdown';
+import PropTypes from 'prop-types'
 
 class Currency extends Component {
     constructor(props) {
         super()
     }
     render() {
-        return (
 
+        return (
             <div style={{
                 border: '0.5px solid black', display: 'flex',
                 flexDirection: 'row',
@@ -24,6 +25,7 @@ class Currency extends Component {
                 {/* <Convert /> */}
                 <br />
                 <Dropdown
+                
                     getCurrency4={this.props.getCurrency4}
                     currency3={this.props.currency3}
                     currency2={this.props.currency2}
@@ -36,5 +38,18 @@ class Currency extends Component {
 
     }
 }
+Currency.propTypes = {
+    value: PropTypes.string,
+    searchTerm: PropTypes.string,
+    handleChange: PropTypes.func,
+    handleSubmit: PropTypes.func,
+    handleConvert: PropTypes.func,
+    currency3 : PropTypes.objectOf,
+    currency4 : PropTypes.objectOf,
+    currency2 : PropTypes.objectOf,
+    currency : PropTypes.objectOf,
+    getCurrency4 : PropTypes.func,
 
+    
+}
 export default Currency

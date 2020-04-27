@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import SearchCorona from './Search';
+import PropTypes from 'prop-types';
 
 
 class TotalCases extends Component {
@@ -34,12 +35,14 @@ return(
         </div>
         
         )
-        }
+    }
 
 
+}
+TotalCases.propTypes = {
+    cases: PropTypes.array,
 
-
-
+    
 }
 
 export default TotalCases

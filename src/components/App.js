@@ -8,6 +8,7 @@ import Animation from './Animation'
 import Currency from './Currency Component/Currency';
 import Dropdown from './Currency Component/Dropdown';
 import CoronaByState from './Corona By State Component/CoronaByState';
+import Search from './Corona Component/Search'
 // import Button from '@material-ui/core/Button';
 import {Menu , Button , MenuItem,
     ClickAwayListener,
@@ -238,7 +239,7 @@ componentDidMount(){
 }
 
 render(){
-    console.log('coronabystate..' ,this.state.casesByState )
+    console.log('cases....' , this.state.cases)
     return(
         
 <div>
@@ -253,6 +254,8 @@ render(){
 <div className='Corona Cases'>
 
 <TotalCases cases={this.state.cases}/>
+<br />
+<Search cases={this.state.cases}/>
 <CoronaCases cases={this.state.cases}/>
 <CoronaByState casesByState={this.state.casesByState} />
 

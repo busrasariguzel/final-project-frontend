@@ -30,13 +30,14 @@ class DollarToChineseYuan extends Component{
             if(item.CNY){
                 return (
                     <div key={idx}>
+                        {console.log(item)}
                     <p> Conversion Result : {item.CNY.rate_for_amount}  </p>
                     
                     </div>
                     )
                     } 
             }
-         
+    
             
 
     })}
@@ -44,5 +45,6 @@ class DollarToChineseYuan extends Component{
         )
     }
 }
+
 
 export default DollarToChineseYuan

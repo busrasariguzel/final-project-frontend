@@ -1,5 +1,6 @@
-import React, {Component} from 'react'
-import DropdownStates from './DropdownStates'
+import React, {Component} from 'react';
+import DropdownStates from './DropdownStates';
+import PropTypes from 'prop-types'
 
 
 class CoronaByState extends Component {
@@ -182,6 +183,14 @@ D<option value="District of Columbia">District of Columbia</option>
 }
 
 
+}
+
+CoronaByState.propTypes = {
+    value: PropTypes.string,
+    usaState: PropTypes.string,
+    handleChange: PropTypes.func,
+    handleSubmit: PropTypes.func,
+    
 }
 
 export default CoronaByState

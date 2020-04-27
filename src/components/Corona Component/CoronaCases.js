@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import EachCoronaCase from './EachCoronaCase';
 import SearchCorona from './Search'
+import PropTypes from 'prop-types'
 
 
 class CoronaCases extends Component {
@@ -33,6 +34,11 @@ render(){
 }
 
 
+}
+CoronaCases.propTypes = {
+    cases: PropTypes.array,
+    
+    
 }
 
 export default CoronaCases

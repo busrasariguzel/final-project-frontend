@@ -25,5 +25,6 @@ render(){
                 )
             }
             } 
+            
 
 export default EachCoronaCase

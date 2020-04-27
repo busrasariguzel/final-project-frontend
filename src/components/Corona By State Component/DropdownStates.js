@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types'
 
 
 class DropdownStates extends Component {
@@ -50,7 +51,14 @@ class DropdownStates extends Component {
       );
     }
   }
-
+  DropdownStates.propTypes = {
+    value: PropTypes.string,
+    searchTerm: PropTypes.string,
+    handleChange: PropTypes.func,
+    handleSubmit: PropTypes.func,
+    handleConvert: PropTypes.func,
+    
+}
 
 
   export default DropdownStates

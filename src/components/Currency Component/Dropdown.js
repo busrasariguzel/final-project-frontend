@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types'
 
 
 class Dropdown extends Component {
     constructor(props) {
       super(props);
       this.state = {
-          value: '',
+          value: 'TRY',
           searchTerm: ''
 
         };
@@ -19,9 +20,9 @@ class Dropdown extends Component {
     }
   
     handleSubmit= (event) => {
-      this.props.getCurrency4(this.state.value, this.state.searchTerm);
+        this.props.getCurrency4(this.state.value, this.state.searchTerm);
+        event.preventDefault();
       // alert('Your currency is: ' + this.state.value);
-      event.preventDefault();
     }
     handleConvert = (event) => {
       this.setState({searchTerm:event.target.value}, ()=> {
@@ -35,7 +36,6 @@ class Dropdown extends Component {
           <label>
             Pick your currency:
             <select value={this.state.value} onChange={this.handleChange}>
-              <option value="empty">Select</option>
               <option value="TRY">Turkish Lira</option>
               <option value="EUR">Euro</option>
               <option value="CNY">Chinese Yuan</option>
@@ -49,6 +49,14 @@ class Dropdown extends Component {
       );
     }
   }
+  Dropdown.propTypes = {
+    value: PropTypes.string,
+    searchTerm: PropTypes.string,
+    handleChange: PropTypes.func,
+    handleSubmit: PropTypes.func,
+    handleConvert: PropTypes.func,
+    
+}
 
 
 

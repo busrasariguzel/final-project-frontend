@@ -25,7 +25,6 @@ constructor(){
         currency2:[],
         currency3:[],
         currency4:[],
-        news:[],
         casesByState:[],
         casesByState2:[],
         
@@ -42,9 +41,7 @@ getCurrency = () => {
         }
     })
     .then(response => {
-        // console.log('currency...', response);
         this.setState({ currency: response.data})
-        console.log(this.state.currency)
     })
     .catch(err => {
         console.log(err);
@@ -60,9 +57,8 @@ getCurrency4 = (currency, amount) => {
         }
     }) 
     .then(response => {
-        // console.log('currency...', response);
         this.setState({ currency4: response.data})
-        console.log('currency 4...', this.state.currency4)
+        
     })
     .catch(err => {
         console.log(err);
@@ -78,9 +74,9 @@ getCurrency2 = () => {
         }
     }) 
     .then(response => {
-        // console.log('currency...', response);
+        
         this.setState({ currency2: response.data})
-        console.log(this.state.currency2)
+        
     })
     .catch(err => {
         console.log(err);
@@ -97,31 +93,15 @@ getCurrency3 = () => {
         }
     })
     .then(response => {
-        // console.log('currency...', response);
+        
         this.setState({ currency3: response.data})
-        console.log(this.state.currency3)
+        
     })
     .catch(err => {
         console.log(err);
     });
 
 }
-getNews = () => {
-    axios.get("https://myallies-breaking-news-v1.p.rapidapi.com/GetTopNews", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "myallies-breaking-news-v1.p.rapidapi.com",
-            "x-rapidapi-key": "166a12c160msh0bf532aec0b7a0ep10056ajsncff2841e5dfb"
-        }
-    })
-    .then(response => {
-        console.log('news......', response);
-    })
-    .catch(err => {
-        console.log(err);
-    });
-}
-
 
 getJournals = () => {
     const url = '/journals';
@@ -208,15 +188,6 @@ onUpdate = (id) => {
 }
 
 
-// getJournalItem = (id) => {
-//     axios.get(`/journal/${id}`).then((journal) => {
-//         this.setState({
-//             journal: journal.data,
-//         })
-//     })
-// }
-
-
 
 
 
@@ -229,7 +200,7 @@ componentDidMount(){
     this.getCurrency3();
     this.getCurrency4();
     this.getCoronaByState();
-    // this.getNews();
+    
     
 }
 
@@ -238,7 +209,7 @@ render(){
 
 <div >
 
-<Animation style={{size:'100px'}}/>
+<Animation style={{fontSize:'100px'}}/><br></br>
 <TotalCases cases={this.state.cases}/>
 
 <Search cases={this.state.cases} />
@@ -251,17 +222,19 @@ render(){
 
 <br></br>
 <div className='Currency'>
+    <h1 class="ui orange header" style={{textDecoration:'underline', textAlign:'center', fontSize:'33px'}}>Currencies</h1><br />
 <Currency getCurrency4={this.getCurrency4} handleConvert={this.handleConvert} searchTerm={this.state.searchTerm} currency={this.state.currency} currency2={this.state.currency2} currency3={this.state.currency3} currency4={this.state.currency4}/>
         
         {/* <Dropdown  currency2={this.state.currency2}/>  */}
-    </div><br />
+    </div><br></br>
 <div 
 style={{
             
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'right',
-            alignItems: 'stretch'
+            alignItems: 'stretch',
+            
             
         }}
         >

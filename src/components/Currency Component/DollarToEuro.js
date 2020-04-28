@@ -19,10 +19,10 @@ class DollarToEuro extends Component{
         if (typeof item === 'object') {
             return (
             <div key={idx}>
-            <i style={{paddingLeft:'28px'}} class="euro icon big"></i><br></br><br></br>
-            <p class="ui orange label"> USD /  {item.EUR.currency_name} </p><br></br>
-            <div class="ui tag labels"><br></br>
-            <p class="ui label"> {item.EUR.rate} &#8364;</p>
+            <i style={{paddingLeft:'28px'}} class="euro huge icon big"></i><br></br><br></br>
+            <p class="ui orange large label"> USD /  {item.EUR.currency_name} </p><br></br>
+            <div class="ui tag large labels"><br></br>
+            <p class="ui label large "> {item.EUR.rate} &#8364;</p>
             </div>
             </div>
             )
@@ -34,7 +34,7 @@ class DollarToEuro extends Component{
             if(item.EUR){
                 return (
                     <div key={idx}>
-                    <p style={{paddingLeft:'30px'}} class="ui orange basic label"> {item.EUR.rate_for_amount}  &#8364; </p>
+                    <p style={{paddingLeft:'30px'}} class="ui orange basic large label"> {item.EUR.rate_for_amount}  &#8364; </p>
                     
                     </div>
                     )

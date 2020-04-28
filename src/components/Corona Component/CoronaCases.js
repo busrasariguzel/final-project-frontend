@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import EachCoronaCase from './EachCoronaCase';
-import SearchCorona from './Search'
+// import SearchCorona from './Search'
 import PropTypes from 'prop-types'
 
 
@@ -16,8 +16,11 @@ render(){
             
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'spaceBetween',
-            alignItems:'baseline'
+            justifyContent: 'space-evenly',
+            alignItems:'stretch',
+            flexWrap: 'wrap',
+            
+            
         }}>
 {this.props.cases.filter(item => item.cases.total > 90000 && item.country !== 'All' && item.country !== 'North-America' && item.country !== 'Europe' && item.country !== 'Asia' &&item.country !== 'South-America').sort((a, b) => b.cases.total - a.cases.total)
 .map((item,idx)=>{

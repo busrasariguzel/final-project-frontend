@@ -13,15 +13,17 @@ class Currency extends Component {
 
         return (
             <div style={{
-                border: '0.5px solid grey',
+                // border: '0.5px solid lightGrey',
+                borderBottom: '0.5px solid lightGrey',
                 height:'200px',
-                 display: 'flex',
+                display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                // backgroundColor: 'lightGrey'
+                marginTop:'15px'
+                
             }}>
 
-{/* <i class="icons"> */}
+
 <div style={{
     display: 'flex',
     flexDirection: 'column',
@@ -29,15 +31,14 @@ class Currency extends Component {
     justifyContent: 'space-between'
     
 }}>
-    <i class="big dollar icon"></i> 
-    <div class="ui tag labels">
-            
+    <i class="huge dollar icon"></i> 
+    <div class="ui large tag labels">
             </div> </div>
-    <i style={{paddingTop:'35px'}}class="big right arrow icon"> &nbsp; 
+            &nbsp;<i class="huge right arrow icon"> &nbsp; 
     </i>
    
   
-
+<br></br>
                 <DollarToTurkishLira handleConvert={this.props.handleConvert} currency4={this.props.currency4} searchTerm={this.props.searchTerm} currency={this.props.currency} />
                 <DollarToEuro handleConvert={this.props.handleConvert} currency4={this.props.currency4} searchTerm={this.props.searchTerm} currency2={this.props.currency2} />
                 <DollarToChineseYuan handleConvert={this.props.handleConvert} currency4={this.props.currency4} searchTerm={this.props.searchTerm} currency3={this.props.currency3} />

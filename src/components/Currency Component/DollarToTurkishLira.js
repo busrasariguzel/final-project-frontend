@@ -20,10 +20,10 @@ class DollarToTurkishLira extends Component{
             return (
             <div  key={idx}>
                 <i style={{paddingLeft:'45px',
-            }} class="big lira icon"></i><br></br><br></br>
-            <p class="ui orange label"> USD / {item.TRY.currency_name} </p> <br></br>
-            <div class="ui tag labels"><br></br>
-            <p class="ui label"> {item.TRY.rate} &#x20ba;</p>
+            }} class="huge lira icon"></i><br></br><br></br>
+            <p class="ui orange large label"> USD / {item.TRY.currency_name} </p> <br></br>
+            <div class="ui tag large labels"><br></br>
+            <p class="ui large label"> {item.TRY.rate} &#x20ba;</p>
             </div>
             </div>
             )
@@ -41,7 +41,7 @@ class DollarToTurkishLira extends Component{
             if(item.TRY){
                 return (
                     <div key={idx}>
-                    <p style={{paddingLeft:'30px'}}class="ui orange basic label" id="turkishRate"> {item.TRY.rate_for_amount} &#x20ba;  </p>
+                    <p style={{paddingLeft:'30px'}}class="ui orange large basic label" id="turkishRate"> {item.TRY.rate_for_amount} &#x20ba;  </p>
                     
                     </div>
                     )

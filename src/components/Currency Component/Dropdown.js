@@ -33,22 +33,24 @@ class Dropdown extends Component {
     render() {
       return (
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Pick your currency:
-            <select value={this.state.value} onChange={this.handleChange}>
+          <label >
+            <p class="ui orange header ui block header">Pick your currency:</p>
+            <select class="ui fluid selection dropdown" value={this.state.value} onChange={this.handleChange}>
+            
               <option value="TRY">Turkish Lira</option>
               <option value="EUR">Euro</option>
               <option value="CNY">Chinese Yuan</option>
             </select>
           </label><br />
-          <label>Enter the dollar amount  :</label>< br />
+          {/* <label>Enter the dollar amount  :</label>< br /> */}
           <div className="ui right labeled input">
-  <div className="ui basic label">$</div>
+  <div class="required field" className="ui basic label">$</div>
   <input onChange={this.handleConvert} value={this.state.searchTerm} type="text" placeholder="Amount" />
   <div className="ui label">.00</div>
 </div>
-            <br />
-          <input className="ui violet inverted button"type="submit" value="Submit" />
+          <input style={{
+            paddingLeft:'20px'
+          }}className="ui orange inverted button" type="submit" value="Convert" />
         </form>
       );
     }

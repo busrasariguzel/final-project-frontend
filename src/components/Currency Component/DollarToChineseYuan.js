@@ -19,21 +19,25 @@ class DollarToChineseYuan extends Component{
         if (typeof item === 'object') {
             return (
                 <div key={idx}>
-                    <i class="big yen icon"></i>
-            <p> USD / {item.CNY.currency_name} </p>
-            <p id="chineseRate"> {item.CNY.rate}  </p>
-            
+                    &nbsp; <i style={{paddingLeft:'40px'}} class="big yen icon"></i><br></br><br></br>
+            <p class="ui orange label"> USD / {item.CNY.currency_name} </p><br></br>
+            <div class="ui tag labels"><br></br>
+            <p class="ui label"> {item.CNY.rate} &#165; </p>
+            </div>
             </div>
             )
             }
     })} 
     {obj2.map((item, idx)=>{
         if (typeof item === 'object') {
-            if(item.CNY){
+            if(item.CNY ){
+                
                 return (
                     <div key={idx}>
                         {console.log(item)}
-                    <p>  {item.CNY.rate_for_amount}  </p>
+        
+  <p style= {{paddingLeft:'40px'}} class="ui orange basic label"> {item.CNY.rate_for_amount.toLocaleString(navigator.language, { minimumFractionDigits: 0 })} &#165;</p>
+  
                     
                     </div>
                     )

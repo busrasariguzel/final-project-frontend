@@ -18,11 +18,13 @@ class DollarToTurkishLira extends Component{
     {obj.map((item, idx)=>{
         if (typeof item === 'object') {
             return (
-            <div key={idx}>
-                <i class="big lira icon"></i>
-            <p> USD / {item.TRY.currency_name} </p> 
-            <p id="turkishRate"> {item.TRY.rate}  </p>
-            
+            <div  key={idx}>
+                <i style={{paddingLeft:'45px',
+            }} class="big lira icon"></i><br></br><br></br>
+            <p class="ui orange label"> USD / {item.TRY.currency_name} </p> <br></br>
+            <div class="ui tag labels"><br></br>
+            <p class="ui label"> {item.TRY.rate} &#x20ba;</p>
+            </div>
             </div>
             )
             }
@@ -39,7 +41,7 @@ class DollarToTurkishLira extends Component{
             if(item.TRY){
                 return (
                     <div key={idx}>
-                    <p id="turkishRate"> {item.TRY.rate_for_amount}  </p>
+                    <p style={{paddingLeft:'30px'}}class="ui orange basic label" id="turkishRate"> {item.TRY.rate_for_amount} &#x20ba;  </p>
                     
                     </div>
                     )

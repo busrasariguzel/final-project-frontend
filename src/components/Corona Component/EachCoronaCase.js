@@ -26,48 +26,41 @@ key={this.props.idx}>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="label ui blue horizontal label">Total Cases</div>
-    : {this.props.item.cases.total}
+    : {this.props.item.cases.total.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui green horizontal label">New Cases</div>
-    : {this.props.item.cases.new}
+    : {this.props.item.cases.new.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui orange horizontal label">Total Deaths</div>
-    : {this.props.item.deaths.total}
+    : {this.props.item.deaths.total.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui teal horizontal label">New Deaths</div>
-    : {this.props.item.deaths.new}
+    : {this.props.item.deaths.new.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui violet horizontal label">Recovered</div>
-    : {this.props.item.cases.recovered}
+    : {this.props.item.cases.recovered.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui yellow horizontal label">Critical</div>
-    : {this.props.item.cases.critical}
+    : {this.props.item.cases.critical.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     </div>
     </div>
-                    {/* <p style={{color:'blue', textDecoration:'underline'}}>{this.props.item.country}</p>
-                    <p>Total Cases: {this.props.item.cases.total}</p>
-                    <p>New Cases: {this.props.item.cases.new}</p>
-                    <p>Total Deaths: {this.props.item.deaths.total}</p>
-                    <p>New Deaths : {this.props.item.deaths.new}</p>
-                    <p>Recovered: {this.props.item.cases.recovered}</p>
-                    <p>Critical: {this.props.item.cases.critical}</p> */}
 
                 </div>
         </div>

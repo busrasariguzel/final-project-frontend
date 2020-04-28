@@ -14,13 +14,30 @@ render(){
     return(
 <div style={{textAlign:'center'}}>
         {this.props.cases.filter(item => item.country === 'All').map((item, idx) => {
-            console.log(item)
+            console.log('total cases...', item)
 return(
-<div key={idx}>
+<div key={idx} style={{ textAlign:'center' }}  >
 
-            <h1 class="ui red header ui top attached header ui red header"> Worldwide</h1>
+             <h1 class="ui red big header ui top attached header ui red header" style={{fontSize:'3em'}}> Worldwide</h1>
+            <div style={{ textAlign:'center' , paddingLeft:'210px'}}  >
+                
+  <div style={{textAlign:'center'}} class="ui  statistics">
+    <div class="ui statistic" style={{ textAlign:'center' }} >
+      <div class="value">{item.cases.total.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}</div>
+      <div class="label">Total Cases</div>
+    </div>
+    <div class="ui statistic">
+      <div class="value">{item.deaths.total.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}</div>
+      <div class="label">Total Deaths</div>
+    </div>
+    <div class="ui statistic">
+      <div class="value">{item.cases.new.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}</div>
+      <div class="label">New Cases</div>
+    </div>
+  </div>
+</div> 
             
-            <div class="ui attached segment">
+             {/* <div class="ui attached segment">
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui big  ui blue horizontal label">Total Cases</div>
@@ -57,7 +74,7 @@ return(
     : {item.cases.critical}
     </div>
     </div>
-    </div>
+    </div>  */}
             {/* <p>Total Cases : {item.cases.total}</p>
             <p>Total Deaths: {item.deaths.total}</p>
             <p>New Cases : {item.cases.new}</p>

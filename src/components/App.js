@@ -11,13 +11,7 @@ import CoronaByState from './Corona By State Component/CoronaByState';
 import Search from './Corona Component/Search'
 import Title from './Title'
 // import Button from '@material-ui/core/Button';
-import {Menu , Button , MenuItem,
-    ClickAwayListener,
-    MenuList,
-    Popover,
-    Popper
 
-} from '@material-ui/core';
 
 class App extends Component {
 constructor(){
@@ -244,11 +238,13 @@ render(){
     return(
         
 <div >
-    <Title  />
+
 <Animation style={{size:'50px'}}/>
+<h1>CORONAVIRUS UPDATES</h1>
 <div className='Corona Cases'>
+<Search cases={this.state.cases} />
 <TotalCases cases={this.state.cases}/>
-<Search cases={this.state.cases} /><br />
+
 <CoronaByState casesByState={this.state.casesByState} />
 
 <CoronaCases cases={this.state.cases}/>
@@ -256,12 +252,12 @@ render(){
 
 </div>
 <div className='Currency'>
-        <h3>Currency section</h3>
-        <Currency getCurrency4={this.getCurrency4} handleConvert={this.handleConvert} searchTerm={this.state.searchTerm} currency={this.state.currency} currency2={this.state.currency2} currency3={this.state.currency3} currency4={this.state.currency4}/>
+<Currency getCurrency4={this.getCurrency4} handleConvert={this.handleConvert} searchTerm={this.state.searchTerm} currency={this.state.currency} currency2={this.state.currency2} currency3={this.state.currency3} currency4={this.state.currency4}/>
+        
         {/* <Dropdown  currency2={this.state.currency2}/>  */}
     </div><br />
-<div className="journal section" style={{border:'0.5px hotPink solid'}}>
-<h1 style={{color:'hotPink'}}>Gratitude Journal</h1>
+<div className="journal section">
+
 <NewJournal handleNewJournalSubmit={this.handleNewJournalSubmit} />
 <Journal onDelete={this.onDelete}  onUpdate= {this.onUpdate} journals={this.state.journals}/> 
 </div>

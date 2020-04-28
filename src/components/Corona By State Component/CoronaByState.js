@@ -55,7 +55,7 @@ render(){
 
             {/* <h3 class="ui orange header ui block header" >Select your state:</h3> */}
             <select 
-            class="ui orange header ui fluid multiple search selection dropdown" 
+            class="ui red header ui fluid multiple search selection dropdown" 
             value={this.state.usaState} 
             onChange={this.handleChange}
             >
@@ -182,13 +182,13 @@ D<option value="District of Columbia">District of Columbia</option>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui blue horizontal label">Total Cases</div>
-    : {item.confirmed}
+    : {item.confirmed.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui green horizontal label">Total Deaths</div>
-    : {item.deaths}
+    : {item.deaths.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     

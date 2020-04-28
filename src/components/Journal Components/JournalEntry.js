@@ -6,8 +6,8 @@ const JournalEntry = (
     return (
 <div key={id}>
 
-    <h4 style={{color:'blue'}}> {date} </h4>
-    <h5> entry #1: {entry1} </h5>
+    <h3 class="ui header pink"> {date} </h3>
+    <h5 class="ui header"> entry #1: {entry1} </h5>
     <h5> entry #2: {entry2} </h5>
     <h5> entry #3: {entry3} </h5>
     <h5> entry #4: {entry4} </h5>

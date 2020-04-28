@@ -29,17 +29,35 @@ handleSubmit = (event) =>{
 render(){
     return(
         <div>
-            <form style={{color: 'hotPink'}}onSubmit={this.handleSubmit}>
-                <div>
-            <label> #1 : 
+            <h1 style={{ textAlign:'center' }} class="ui header">
+  
+  <div class="content" >
+  <i aria-hidden="true" class="heart outline pink icon"></i>
+      Gratitude Journal 
+      <i aria-hidden="true" class="heart outline pink icon"></i></div>
+</h1>
+<p class="ui header" style={{color:'grey', textAlign:'center', fontStyle:'italic', fontVariantCaps: 'petite-caps'}}>
+
+"According to a study by researchers from the University of Minnesota <br />
+and the University of Florida, having participants write down a list of <br></br>
+positive events and why the events made them happy lowered their self-reported <br></br>
+stress levels and gave them a greater sense of calm at night."<br></br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - From  Arianna Huffington's book Thrive -
+
+</p>
+
+<p class ="ui pink" style={{color:'hotPink', fontStyle:'italic', textAlign:'center'}}>Please write down 5 things that made you happy today.</p>
+            <form  class="ui form"style={{color: 'hotPink'}}onSubmit={this.handleSubmit}>
+                <div >
+            <label> <div class="ui pink circular label">1</div> 
                 </label>
-                <input type="text" 
+                <input class="ui input" type="text" 
                 name="entry1"
                 value={this.state.journal.entry1}
                 onChange={this.handleChange}
                 />
                 <br></br>
-                <label> #2 :
+                <label> <div class="ui pink circular label">2</div>
                 </label>
                 <input type="text" 
                 name="entry2"
@@ -47,7 +65,7 @@ render(){
                 onChange={this.handleChange}
                 />
                 <br></br>
-                <label> #3 :
+                <label> <div class="ui pink circular label">3</div>
                 </label>
                 <input type="text" 
                 name="entry3"
@@ -55,7 +73,7 @@ render(){
                 onChange={this.handleChange}
                 />
                 <br></br>
-                <label> #4 :
+                <label> <div class="ui pink circular label">4</div>
                 </label>
                 <input type="text" 
                 name="entry4"
@@ -63,7 +81,7 @@ render(){
                 onChange={this.handleChange}
                 />
                 <br></br>
-                <label> #5 :
+                <label><div class="ui pink circular label">5</div>
                 </label>
                 <input type="text" 
                 name="entry5"
@@ -71,8 +89,10 @@ render(){
                 onChange={this.handleChange}
                 />
 
+                </div><br />
+                <div style={{ textAlign:'center' }} >
+                <button class="ui pink large button" type="submit" >Submit</button>
                 </div>
-                <button class="ui pink button" type="submit" >Submit</button>
             </form>
         </div>
     )

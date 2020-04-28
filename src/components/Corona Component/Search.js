@@ -95,37 +95,37 @@ class SearchCorona extends Component {
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui blue horizontal label">Total Cases</div>
-    : {item.cases.total}
+    : {item.cases.total.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui green horizontal label">New Cases</div>
-    : {item.cases.new}
+    : {item.cases.new.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui orange horizontal label">Total Deaths</div>
-    : {item.deaths.total}
+    : {item.deaths.total.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui teal horizontal label">New Deaths</div>
-    : {item.deaths.new}
+    : {item.deaths.new.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui violet horizontal label">Recovered</div>
-    : {item.cases.recovered}
+    : {item.cases.recovered.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui yellow horizontal label">Critical</div>
-    : {item.cases.critical}
+    : {item.cases.critical.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
     
     </div>
     </div>

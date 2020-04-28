@@ -2,7 +2,7 @@
 
 Busra's Dashboard is a full stack project which is combined of a backend and frontend apps. In the app, you can : 
 
-- Display daily currencies
+- Display daily currencies of Chinese yuan, euro, and Turkish lira.
 - Checkout the COVID-19 data of the world, each country, and each USA states
 - Keep a journal of your blessings
 

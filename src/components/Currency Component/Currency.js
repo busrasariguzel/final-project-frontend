@@ -13,7 +13,9 @@ class Currency extends Component {
 
         return (
             <div style={{
-                border: '0.5px solid black', display: 'flex',
+                border: '0.5px solid grey',
+                height:'200px',
+                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 // backgroundColor: 'lightGrey'
@@ -25,22 +27,22 @@ class Currency extends Component {
     flexDirection: 'column',
     justifyContent: 'start',
     justifyContent: 'space-between'
-    // alignItems:'baseline'
+    
 }}>
-    <i class="big dollar icon"></i> <br></br>&nbsp; 
+    <i class="big dollar icon"></i> 
     <div class="ui tag labels">
-            <p class="ui label"> $1.000 </p><br></br>&nbsp; &nbsp; &nbsp; &nbsp; 
+            
             </div> </div>
     <i style={{paddingTop:'35px'}}class="big right arrow icon"> &nbsp; 
     </i>
-    {/* </i> */}
+   
   
 
                 <DollarToTurkishLira handleConvert={this.props.handleConvert} currency4={this.props.currency4} searchTerm={this.props.searchTerm} currency={this.props.currency} />
                 <DollarToEuro handleConvert={this.props.handleConvert} currency4={this.props.currency4} searchTerm={this.props.searchTerm} currency2={this.props.currency2} />
                 <DollarToChineseYuan handleConvert={this.props.handleConvert} currency4={this.props.currency4} searchTerm={this.props.searchTerm} currency3={this.props.currency3} />
 
-                {/* <Convert /> */}
+                
                 <br /> <br></br>
                 <Dropdown
                 

@@ -18,8 +18,8 @@ render(){
 return(
 <div key={idx} style={{ textAlign:'center' }}  >
 
-             <h1 class="ui red big header ui top attached header ui red header" style={{fontSize:'3em'}}> Worldwide</h1>
-            <div style={{ textAlign:'center' , paddingLeft:'210px'}}  >
+             <h1 class="ui red big header ui top attached header ui red header" style={{fontSize:'3em'}}> Worldwide</h1><br></br>
+            <div style={{ textAlign:'center' , paddingLeft:'25%', borderTop:'white'}}  >
                 
   <div style={{textAlign:'center'}} class="ui  statistics">
     <div class="ui statistic" style={{ textAlign:'center' }} >
@@ -35,7 +35,7 @@ return(
       <div class="label">New Cases</div>
     </div>
   </div>
-</div> 
+</div> <br></br><br></br>
             
              {/* <div class="ui attached segment">
     <div role="list" class="ui divided selection list">

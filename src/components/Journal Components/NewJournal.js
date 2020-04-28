@@ -48,9 +48,9 @@ stress levels and gave them a greater sense of calm at night."<br></br>
 
 <p class ="ui pink" style={{color:'hotPink', fontStyle:'italic', textAlign:'center'}}>Please write down 5 things that made you happy today.</p>
             <form  class="ui form"style={{color: 'hotPink'}}onSubmit={this.handleSubmit}>
-                <div >
-            <label> <div class="ui pink circular label">1</div> 
-                </label>
+                <div>
+            <div class="ui pink circular label">1</div> 
+                
                 <input class="ui input" type="text" 
                 name="entry1"
                 value={this.state.journal.entry1}

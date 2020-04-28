@@ -24,9 +24,9 @@ class SearchCorona extends Component {
     render(){
         console.log(this.props.cases)
         return(
-            <div>
+            <div style={{height:'10%'}}>
                 <form >
-                <div class="ui placeholder segment" style={{height:'10px', backgroundColor: 'orange' ,}} >
+                <div class="ui placeholder segment" style={{height:'40%', backgroundColor: 'orange' ,}} >
   <div class="ui stackable center aligned two column grid">
   {/* <div class="ui vertical divider">Or</div> */}
     {/* <div class="ui vertical divider"></div> */}
@@ -82,8 +82,7 @@ class SearchCorona extends Component {
 // console.log(this.state.country)
 // console.log(item.country)
         if(this.state.country.toLowerCase() === item.country.toLowerCase()){
-            console.log(item.country)
-            console.log(item.cases.total)
+          
             
                     return (
                         <div style={{
@@ -101,7 +100,7 @@ class SearchCorona extends Component {
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui green horizontal label">New Cases</div>
-    : {item.cases.new.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
+    : {item.cases.new}
     </div>
     </div>
     <div role="list" class="ui divided selection list">
@@ -113,7 +112,7 @@ class SearchCorona extends Component {
     <div role="list" class="ui divided selection list">
     <div role="listitem" class="item">
     <div class="ui teal horizontal label">New Deaths</div>
-    : {item.deaths.new.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}
+    : {item.deaths.new}
     </div>
     </div>
     <div role="list" class="ui divided selection list">

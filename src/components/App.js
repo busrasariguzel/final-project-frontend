@@ -234,29 +234,37 @@ componentDidMount(){
 }
 
 render(){
-    console.log('cases....' , this.state.cases)
     return(
-        
+
 <div >
 
-<Animation style={{size:'50px'}}/>
-<h1>CORONAVIRUS UPDATES</h1>
-<div className='Corona Cases'>
-<Search cases={this.state.cases} />
+<Animation style={{size:'100px'}}/>
 <TotalCases cases={this.state.cases}/>
+
+<Search cases={this.state.cases} />
+
 
 <CoronaByState casesByState={this.state.casesByState} />
 
-<CoronaCases cases={this.state.cases}/>
+<CoronaCases cases={this.state.cases}/><br></br>
 
 
-</div>
+<br></br>
 <div className='Currency'>
 <Currency getCurrency4={this.getCurrency4} handleConvert={this.handleConvert} searchTerm={this.state.searchTerm} currency={this.state.currency} currency2={this.state.currency2} currency3={this.state.currency3} currency4={this.state.currency4}/>
         
         {/* <Dropdown  currency2={this.state.currency2}/>  */}
     </div><br />
-<div className="journal section">
+<div 
+style={{
+            
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'right',
+            alignItems: 'stretch'
+            
+        }}
+        >
 
 <NewJournal handleNewJournalSubmit={this.handleNewJournalSubmit} />
 <Journal onDelete={this.onDelete}  onUpdate= {this.onUpdate} journals={this.state.journals}/> 

@@ -9,11 +9,19 @@ class EachCoronaCase extends Component {
 render(){
     return(
         <div style={{
-            width:'40%',
+            
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems:'baseline'
         }}>
-<div 
+<div style={{
+            
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems:'baseline'
+        }}
 key={this.props.idx}>
-<div 
+<div
 >
 <h2 class="ui top attached header ui red header">{this.props.item.country}</h2>
     {/* <div role="list" class="ui divided selection list">
